@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeTraker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Anime Traker</h1>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Ajouter un Nouvel Anime</h2>
+            <form id="add-anime-form">
+                <div>
+                    <label for="title">Titre de l'anime :</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div>
+                    <label for="status">Statut :</label>
+                    <select id="status" name="status">
+                        <option value="to-watch">À Regarder</option>
+                        <option value="watching">En Cours</option>
+                        <option value="finished">Terminé</option>
+                    </select>
+                </div>
+                <div id="watching-details" class="details-section" style="display: none;">
+                    <label for="current-episode">Épisode/Saison en cours :</label>
+                    <input type="text" id="current-episode" name="current-episode" placeholder="Ex: S1 E12">
+                    <label for="current-minute">Minute (optionnel) :</label>
+                    <input type="text" id="current-minute" name="current-minute" placeholder="Ex: 07:34">
+                </div>
+                <div id="finished-details" class="details-section" style="display: none;">
+                    <label for="watched-seasons">Saisons vues :</label>
+                    <input type="text" id="watched-seasons" name="watched-seasons" placeholder="Ex: S1, S2 P1">
+                    <label for="rating">Note /10 :</label>
+                    <input type="number" id="rating" name="rating" min="0" max="10">
+                </div>
+                <button type="submit">Ajouter l'Anime</button>
+            </form>
+        </div>
+
+        <div class="anime-lists-container">
+            <section id="to-watch-section">
+                <h2>À Regarder</h2>
+                <ul id="to-watch-list" class="anime-list">
+                    </ul>
+            </section>
+
+            <section id="watching-section">
+                <h2>En Cours de Visionnage</h2>
+                <ul id="watching-list" class="anime-list">
+                    </ul>
+            </section>
+
+            <section id="finished-section">
+                <h2>Termines</h2>
+                <ul id="finished-list" class="anime-list">
+                    </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Anime Tracker 2025</p>
+    </footer>
+
+    <script src="script.js" defer></script> </body>
+</html>
